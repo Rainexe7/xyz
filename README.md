@@ -127,45 +127,6 @@ do
       end
     )
     end
-    
-local ScreenGui1 = Instance.new("ScreenGui")
-local ImageButton1 = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
-local UIStroke = Instance.new("UIStroke")
-
-ScreenGui1.Name = "ImageButton"
-ScreenGui1.Parent = game.CoreGui
-ScreenGui1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-ImageButton1.Parent = ScreenGui1
-ImageButton1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageButton1.BorderSizePixel = 0
-ImageButton1.Position = UDim2.new(0.5, -25, 0, 10)
-ImageButton1.Size = UDim2.new(0, 50, 0, 50)
-ImageButton1.Image = "rbxassetid://18981924795"
-ImageButton1.Draggable = false
-
-ImageButton1.MouseButton1Down:Connect(function()
-    BlurEffect.Visible = not BlurEffect.Visible
-    game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
-    game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
-end)
-
-UICorner.Parent = ImageButton1
-
-UIStroke.Color = Color3.fromRGB(144, 26, 255)
-UIStroke.Thickness = 1.5
-UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke.Parent = ImageButton1
-
-local BlurEffect = Instance.new("BlurEffect")
-BlurEffect.Size = 0
-BlurEffect.Parent = game.Lighting
-
-if game.Workspace.CurrentCamera then
-    if game.Workspace.CurrentCamera.FieldOfView == 0 then
-    end
-end
 
     local UI = Instance.new("ScreenGui")
     UI.Name = randomString
